@@ -17,14 +17,14 @@ public class DecionElseApp
     {
        // System.out.println("Hello World! VM");
         
-        String correctPassword = "mySecurePassword";
+        int correctPasscode = 4875;
      
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter your password: ");
-        String enteredPassword = scanner.nextLine();
+        String enteredPasscode = scanner.nextLine();
 
-        if (enteredPassword.equals(correctPassword)) 
+        if (enteredPasscode.equals(correctPasscode)) 
         {
             System.out.println("Welcome! Access granted.");
         } else 
