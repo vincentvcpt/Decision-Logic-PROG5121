@@ -15,21 +15,21 @@ public class DecionElseApp
 
     public static void main(String[] args) 
     {
-       // System.out.println("Hello World! VM");
+       
         
-        int correctPasscode = 4875;
+      //  int correctPasscode = 4875;
      
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter your password: ");
-        String enteredPasscode = scanner.nextLine();
+        System.out.print("Please Enter your passcode: ");
+        int enteredPasscode = scanner.nextInt() ;
 
-        if (enteredPasscode.equals(correctPasscode)) 
+        if (enteredPasscode ==4554 ) 
         {
             System.out.println("Welcome! Access granted.");
         } else 
         {
-            System.out.println("Incorrect password. Try again.");
+            System.out.println("Incorrect passcode. Try again.");
         }
         
         scanner.close();
