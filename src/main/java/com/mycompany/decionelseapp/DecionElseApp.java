@@ -12,27 +12,46 @@ import java.util.Scanner;
  */
 public class DecionElseApp 
 {
-
-    public static void main(String[] args) 
-    {
-       
         
-      //  int correctPasscode = 4875;
-     
-        Scanner scanner = new Scanner(System.in);
+        public static boolean login(String username, String password) 
+        
+    {
+        String correctUsername = "student";
+        String correctPassword = "12345";
 
-        System.out.print("Please Enter your passcode: ");
-        int enteredPasscode = scanner.nextInt() ;
+        return username.equals(correctUsername) && password.equals(correctPassword);
+    }
 
-        if (enteredPasscode ==4554 ) 
+    public static void displayStudentInfo() 
+    {
+        System.out.println("Student Name: Megan Wallis");
+        System.out.println("Year of Study: 1st Year");
+        System.out.println("Group: BCAD0701");
+        System.out.println("Module: Programming");
+        System.out.println("Qualification: Bachelor of Computer and Information Science");
+    }
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter username: ");
+        String username = input.nextLine();
+
+        System.out.print("Enter password: ");
+        String password = input.nextLine();
+
+        if (login(username, password)) 
+        
         {
-            System.out.println("Welcome! Access granted.");
+            System.out.println("Access granted. Welcome to the School of Computer Science LMS 2026.");
+            displayStudentInfo();
         } else 
         {
-            System.out.println("Incorrect passcode. Try again.");
+            System.out.println("Incorrect username/password. Goodbye. Please try again.");
         }
-        
-        scanner.close();
-        
+
+        input.close();
     }
 }
+        
